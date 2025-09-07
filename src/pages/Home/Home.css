@@ -1,0 +1,128 @@
+.home {
+    padding: 0px 10px;
+    padding-bottom: 100px;
+}
+
+.hero {
+    margin: 80px auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.hero h1 {
+    font-size: max(4vw , 36px);
+}
+
+.hero p {
+    width: 75%;
+    color: #e3e3e3;
+    line-height: 1.5;
+}
+
+.hero form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    /* * */
+    width: 80%;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 20px;
+    gap: 10px;
+}
+.hero input {
+    /* so it uses all of the form area except button */
+    flex: 1;
+    font-size: 16px;
+    padding-left: 10px;
+    border:none;
+    outline: none;
+}
+.hero button {
+    border: none;
+    background: #7927ff;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 30px;
+}
+
+
+
+.crypto-table {
+    max-width: 800px;
+    margin: auto;
+    background: linear-gradient(rgba(84,3,255,0.15) , rgba(105,2,153,0.15));
+    border-radius: 15px;
+}
+
+.table-layout {
+    /* *** because the relevant columns should be aligned vertically *** */
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr ;
+    padding: 15px 20px;
+    align-items: center;
+    border-bottom: 1px solid #3c3c3c;
+}
+
+
+.table-layout:last-child {
+    border: none;
+}
+
+
+
+
+.table-layout div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.table-layout div img {
+    width: 35px;
+}
+
+@media screen and (max-width:800px) {
+    .table-layout {
+        grid-template-columns: 0.5fr 3fr 1fr 1fr ;
+    }
+    .market-cap {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .hero button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    .hero input {
+        width: 100px;
+        font-size: 12px;
+    }
+    .table-layout div img {
+        width: 25px;
+    }
+    .table-layout {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .table-layout {
+        font-size: 12px;
+    }
+    .table-layout div img {
+        width: 20px;
+    }
+    .price {
+        font-size: 11px;
+    }
+}
